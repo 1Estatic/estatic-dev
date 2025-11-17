@@ -356,23 +356,6 @@ pnpm start
 
 ## ⚙️ Important Configurations
 
-### Next.js Config (`next.config.mjs`)
-```javascript
-{
-  typescript: {
-    ignoreBuildErrors: true  // Ignores TypeScript errors in build
-  },
-  images: {
-    unoptimized: true  // Unoptimized images (for static exports)
-  },
-  allowedDevOrigins: [
-    // Allowed IPs for local network access in development
-    'http://26.204.26.123:3000',
-    '26.204.26.123'
-  ]
-}
-```
-
 ### .gitignore
 The project includes a complete `.gitignore` that ignores:
 - 📁 `/.next/` - Next.js build and cache
