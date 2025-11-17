@@ -120,9 +120,10 @@ estatic-dev/
 ├── styles/
 │   └── globals.css         # Estilos globais e variáveis CSS
 ├── components.json         # Configuração shadcn/ui
-├── next.config.mjs         # Configuração Next.js
+├── next.config.mjs         # Configuração Next.js (com allowedDevOrigins)
 ├── tailwind.config.ts      # Configuração Tailwind CSS
 ├── tsconfig.json           # Configuração TypeScript
+├── .gitignore              # Arquivos ignorados pelo Git
 ├── pnpm-lock.yaml          # Lock file do pnpm
 └── package.json            # Dependências e scripts
 ```
@@ -153,25 +154,24 @@ cd estatic-dev
 3. Instale as dependências:
 ```bash
 pnpm install
-# ou
-npm install
-# ou
-yarn install
 ```
 
 4. Execute o servidor de desenvolvimento:
 ```bash
 pnpm dev
-# ou
-npm run dev
-# ou
-yarn dev
 ```
 
 5. Acesse no navegador:
 ```
 http://localhost:3000
 ```
+
+### Acesso via Rede Local
+O projeto está configurado para aceitar conexões de dispositivos na mesma rede local. Para acessar de outros dispositivos:
+
+1. Encontre o IP da sua máquina na rede local
+2. Acesse `http://[SEU-IP]:3000` do outro dispositivo
+3. Se necessário, adicione o IP em `allowedDevOrigins` no `next.config.mjs`
 
 ### Scripts Disponíveis
 
@@ -336,6 +336,33 @@ pnpm build
 # Testar build localmente
 pnpm start
 ```
+
+## ⚙️ Configurações Importantes
+
+### Next.js Config (`next.config.mjs`)
+```javascript
+{
+  typescript: {
+    ignoreBuildErrors: true  // Ignora erros de TypeScript no build
+  },
+  images: {
+    unoptimized: true  // Imagens sem otimização (para exports estáticos)
+  },
+  allowedDevOrigins: [
+    // IPs permitidos para acesso via rede local em desenvolvimento
+    'http://26.204.26.123:3000',
+    '26.204.26.123'
+  ]
+}
+```
+
+### .gitignore
+O projeto inclui um `.gitignore` completo que ignora:
+- 📁 `/.next/` - Build e cache do Next.js
+- 📁 `node_modules/` - Dependências
+- 🔐 `.env*` - Variáveis de ambiente
+- 🗃️ Logs e arquivos temporários
+- 💻 Configurações de IDE
 
 ## 📦 Componentes UI Incluídos
 
