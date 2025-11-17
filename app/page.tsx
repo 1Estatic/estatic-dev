@@ -12,14 +12,24 @@ import Footer from '@/components/footer'
 export default function Home() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500)
     }
 
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', checkMobile)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', checkMobile)
+    }
   }, [])
 
   const scrollToTop = () => {
@@ -170,7 +180,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-2">
-            <p className="text-sm text-muted-foreground font-medium">Scroll down</p>
+            <p className="text-sm text-muted-foreground font-medium">{isMobile ? 'Swipe down' : 'Scroll down'}</p>
             <ArrowDown className="w-6 h-6 text-primary animate-bounce" />
           </div>
         </div>
@@ -506,15 +516,15 @@ export default function Home() {
       </Dialog>
 
       {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 bg-card/40 text-primary backdrop-blur-xl border border-primary/50 rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:border-primary hover:scale-105 active:hover:scale-95 transition-all duration-200 ease-out group"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />
-        </button>
-      )}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 z-50 p-4 bg-card/40 text-primary backdrop-blur-xl border border-primary/50 rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:border-primary hover:scale-105 active:hover:scale-95 transition-all duration-500 ease-in-out group ${
+          showScrollTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />
+      </button>
 
       <Footer />
     </main>

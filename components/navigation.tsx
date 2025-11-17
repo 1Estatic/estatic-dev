@@ -94,7 +94,7 @@ export function Navigation() {
     }`}>
       <div className="rounded-full border border-border/50 backdrop-blur-lg bg-background/80 shadow-lg px-6">
         <div className="flex items-center justify-between h-14 gap-8">
-          <a href="#home" onClick={(e) => handleClick(e, "#home")} className="text-xl font-bold text-primary whitespace-nowrap">
+          <a href="#home" onClick={(e) => handleClick(e, "#home")} draggable="false" className="text-xl font-bold text-primary whitespace-nowrap select-none transition-all duration-200 ease-out hover:scale-105 active:hover:scale-95">
             Estatic
           </a>
 
@@ -102,7 +102,7 @@ export function Navigation() {
             {navItems.map((item) => {
               const Icon = item.icon
               return (
-                <a key={item.href} href={item.href} onClick={(e) => handleClick(e, item.href)}>
+                <a key={item.href} href={item.href} onClick={(e) => handleClick(e, item.href)} draggable="false">
                   <Button variant="ghost" size="sm" className="gap-2 rounded-full">
                     <Icon className="w-4 h-4" />
                     {item.label}
