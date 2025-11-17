@@ -160,7 +160,7 @@ export default function Home() {
             ].map((stat, i) => {
               const Icon = stat.icon
               return (
-                <div key={i} className="p-4 rounded-lg border border-border bg-card/80 backdrop-blur-md hover:border-primary/50 transition-colors shadow-sm">
+                <div key={i} className="p-4 rounded-lg border border-border bg-card/80 backdrop-blur-md hover:border-primary/50 transition-all shadow-sm hover:scale-105 duration-300 ease-out">
                   <Icon className="w-6 h-6 text-primary mx-auto mb-2" />
                   <p className="text-lg font-bold text-primary">{stat.label}</p>
                   <p className="text-xs text-muted-foreground">{stat.value}</p>
@@ -180,7 +180,7 @@ export default function Home() {
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-balance">Hardworking Developer</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-balance">Hardworking <span className="text-primary">Developer</span></h2>
           </div>
 
           <Card className="overflow-hidden bg-card/80 backdrop-blur-md border-border p-12 mb-8 shadow-lg">
@@ -212,7 +212,7 @@ export default function Home() {
             ].map((achievement, i) => {
               const Icon = achievement.icon
               return (
-                <Card key={i} className="bg-card/80 backdrop-blur-md border-border p-6 hover:border-primary/50 transition-colors shadow-sm">
+                <Card key={i} className="bg-card/80 backdrop-blur-md border-border p-6 hover:border-primary/50 transition-all shadow-sm hover:scale-105 duration-300 ease-out">
                   <Icon className="w-8 h-8 text-primary mb-3" />
                   <h4 className="font-semibold text-primary mb-2">{achievement.title}</h4>
                   <p className="text-sm text-muted-foreground">{achievement.description}</p>
@@ -227,7 +227,7 @@ export default function Home() {
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-balance">Technical Mastery</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-balance"><span className="text-primary">Technical Mastery</span></h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Comprehensive expertise in modern development technologies and methodologies
             </p>
@@ -273,7 +273,7 @@ export default function Home() {
       <section id="games" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-balance">Portfolio</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-balance"><span className="text-primary">Portfolio</span></h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Explore my projects across different categories
             </p>
@@ -286,7 +286,7 @@ export default function Home() {
               return (
                 <Card
                   key={category.id}
-                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm"
+                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm hover:scale-105 active:hover:scale-95 duration-200 ease-out"
                   onClick={() => setExpandedCategory(category.id)}
                 >
                   <div className="p-8 space-y-4">
@@ -319,7 +319,7 @@ export default function Home() {
               {projectCategories.map((category) => (
                 <Card
                   key={`highlight-${category.id}`}
-                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm"
+                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm hover:scale-105 active:hover:scale-95 duration-200 ease-out"
                   onClick={() => setExpandedCategory(category.id)}
                 >
                   <div className="relative aspect-video overflow-hidden">
@@ -355,7 +355,7 @@ export default function Home() {
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-balance">Let's Connect</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-balance"><span className="text-primary">Let's Connect</span></h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Want to collaborate on a project or have questions? Feel free to reach out through any of the methods below.
             </p>
@@ -402,8 +402,8 @@ export default function Home() {
                           <Icon className={`w-5 h-5 ${contact.iconColor}`} />
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-bold text-primary">{contact.title}</h3>
-                          <p className="text-sm font-mono text-primary mt-1">{contact.value}</p>
+                          <h3 className="font-bold">{contact.title}</h3>
+                          <p className="text-sm font-mono mt-1">{contact.value}</p>
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground mb-4 flex-1">{contact.description}</p>
@@ -421,13 +421,13 @@ export default function Home() {
             <Card className="overflow-hidden bg-card/80 backdrop-blur-md border-border p-8 shadow-lg">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Send a Message</h3>
+                  <h3 className="text-2xl font-bold mb-2">Send a Message</h3>
                   <p className="text-sm text-muted-foreground">I typically respond within 24 hours</p>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-primary mb-2">Your Name</label>
+                    <label className="block text-sm font-medium mb-2">Your Name</label>
                     <input
                       type="text"
                       placeholder="John Doe"
@@ -436,7 +436,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-primary mb-2">Email Address</label>
+                    <label className="block text-sm font-medium mb-2">Email Address</label>
                     <input
                       type="email"
                       placeholder="john@example.com"
@@ -445,7 +445,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-primary mb-2">Subject</label>
+                    <label className="block text-sm font-medium mb-2">Subject</label>
                     <input
                       type="text"
                       placeholder="Project collaboration"
@@ -454,7 +454,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-primary mb-2">Message</label>
+                    <label className="block text-sm font-medium mb-2">Message</label>
                     <textarea
                       placeholder="Your message here..."
                       rows={4}
@@ -509,7 +509,7 @@ export default function Home() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group"
+          className="fixed bottom-8 right-8 z-50 p-4 bg-card/40 text-primary backdrop-blur-xl border border-primary/50 rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:border-primary hover:scale-105 active:hover:scale-95 transition-all duration-200 ease-out group"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />

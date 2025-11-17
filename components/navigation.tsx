@@ -13,6 +13,7 @@ import {
 export function Navigation() {
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system")
   const [isVisible, setIsVisible] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as "light" | "dark" | "system" | null
@@ -27,6 +28,7 @@ export function Navigation() {
         setIsVisible(true)
       } else {
         setIsVisible(false)
+        setDropdownOpen(false) // Close dropdown when navbar disappears
       }
     }
 
@@ -110,7 +112,7 @@ export function Navigation() {
             })}
           </div>
 
-          <DropdownMenu>
+          <DropdownMenu modal={false} open={dropdownOpen} onOpenChange={setDropdownOpen}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
                 {theme === "light" ? <Sun className="w-5 h-5" /> : theme === "dark" ? <Moon className="w-5 h-5" /> : <Monitor className="w-5 h-5" />}
