@@ -412,17 +412,6 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 - [Tailwind CSS](https://tailwindcss.com/) pelo framework CSS
 - Comunidade Next.js e React
 
-## 📊 Estatísticas do Projeto
-
-- **5.7B+** Total de visitas nos projetos
-- **22.8K+** Jogadores ativos
-- **4+** Anos de experiência
-- **8** Jogos desenvolvidos
-- **50+** Componentes UI reutilizáveis
-- **3** Categorias de projetos
-- **React 19** Versão mais recente do React
-- **pnpm 10.22.0** Gerenciador de pacotes moderno
-
 ## 🔧 Tecnologias e Versões
 
 | Tecnologia | Versão | Descrição |
