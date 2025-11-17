@@ -1,0 +1,373 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.98 0.01 270);
+  --foreground: oklch(0.145 0.02 270);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0.02 270);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0.02 270);
+  --primary: oklch(0.6 0.2 280);
+  --primary-foreground: oklch(0.985 0.01 270);
+  --secondary: oklch(0.95 0.02 270);
+  --secondary-foreground: oklch(0.205 0.02 270);
+  --muted: oklch(0.95 0.02 270);
+  --muted-foreground: oklch(0.556 0.05 270);
+  --accent: oklch(0.6 0.2 280);
+  --accent-foreground: oklch(0.985 0.01 270);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.01 270);
+  --border: oklch(0.9 0.02 270);
+  --input: oklch(0.9 0.02 270);
+  --ring: oklch(0.6 0.2 280);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0.02 270);
+  --foreground: oklch(0.985 0.01 270);
+  --card: oklch(0.18 0.03 270);
+  --card-foreground: oklch(0.985 0.01 270);
+  --popover: oklch(0.18 0.03 270);
+  --popover-foreground: oklch(0.985 0.01 270);
+  --primary: oklch(0.6 0.2 280);
+  --primary-foreground: oklch(0.985 0.01 270);
+  --secondary: oklch(0.25 0.03 270);
+  --secondary-foreground: oklch(0.985 0.01 270);
+  --muted: oklch(0.25 0.03 270);
+  --muted-foreground: oklch(0.65 0.05 270);
+  --accent: oklch(0.6 0.2 280);
+  --accent-foreground: oklch(0.985 0.01 270);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.25 0.03 270);
+  --input: oklch(0.25 0.03 270);
+  --ring: oklch(0.6 0.2 280);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0.02 270);
+  --sidebar-foreground: oklch(0.985 0.01 270);
+  --sidebar-primary: oklch(0.6 0.2 280);
+  --sidebar-primary-foreground: oklch(0.985 0.01 270);
+  --sidebar-accent: oklch(0.269 0.03 270);
+  --sidebar-accent-foreground: oklch(0.985 0.01 270);
+  --sidebar-border: oklch(0.269 0.03 270);
+  --sidebar-ring: oklch(0.6 0.2 280);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Galactic background */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background: radial-gradient(ellipse at top, oklch(0.2 0.08 270) 0%, oklch(0.145 0.02 270) 50%, oklch(0.1 0.02 260) 100%);
+    pointer-events: none;
+  }
+  
+  /* Stars layer 1 - small twinkling stars */
+  body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    background-image: 
+      radial-gradient(1px 1px at 20% 30%, white, transparent),
+      radial-gradient(1px 1px at 60% 70%, white, transparent),
+      radial-gradient(2px 2px at 50% 50%, oklch(0.8 0.1 280), transparent),
+      radial-gradient(1px 1px at 80% 10%, white, transparent),
+      radial-gradient(2px 2px at 90% 60%, oklch(0.8 0.1 290), transparent),
+      radial-gradient(1px 1px at 33% 80%, white, transparent),
+      radial-gradient(1px 1px at 15% 90%, white, transparent),
+      radial-gradient(2px 2px at 45% 20%, white, transparent),
+      radial-gradient(1px 1px at 70% 40%, oklch(0.8 0.1 270), transparent),
+      radial-gradient(1px 1px at 25% 60%, white, transparent),
+      radial-gradient(1px 1px at 95% 25%, white, transparent),
+      radial-gradient(2px 2px at 10% 45%, oklch(0.8 0.1 285), transparent),
+      radial-gradient(1px 1px at 65% 85%, white, transparent),
+      radial-gradient(1px 1px at 35% 15%, white, transparent),
+      radial-gradient(2px 2px at 75% 55%, white, transparent);
+    background-size: 250% 250%, 270% 270%, 230% 230%, 290% 290%, 260% 260%, 240% 240%, 280% 280%, 250% 250%, 265% 265%, 255% 255%, 275% 275%, 245% 245%, 285% 285%, 235% 235%, 295% 295%;
+    background-position: 0% 0%;
+    opacity: 0.7;
+    animation: starfield 120s linear infinite;
+    pointer-events: none;
+  }
+  
+  .dark body::before {
+    background: radial-gradient(ellipse at top, oklch(0.2 0.08 270) 0%, oklch(0.145 0.02 270) 50%, oklch(0.1 0.02 260) 100%);
+  }
+}
+
+/* Stars layer 2 - moving stars */
+.stars-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.stars-layer::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: 
+    radial-gradient(2px 2px at 10% 20%, oklch(0.9 0.05 280), transparent),
+    radial-gradient(1px 1px at 30% 40%, white, transparent),
+    radial-gradient(3px 3px at 50% 60%, oklch(0.85 0.08 290), transparent),
+    radial-gradient(1px 1px at 70% 80%, white, transparent),
+    radial-gradient(2px 2px at 90% 10%, oklch(0.9 0.05 270), transparent),
+    radial-gradient(1px 1px at 15% 70%, white, transparent),
+    radial-gradient(2px 2px at 85% 30%, oklch(0.85 0.08 285), transparent),
+    radial-gradient(1px 1px at 40% 90%, white, transparent),
+    radial-gradient(3px 3px at 60% 15%, oklch(0.9 0.05 275), transparent),
+    radial-gradient(1px 1px at 20% 50%, white, transparent);
+  background-size: 300% 300%;
+  animation: starsMove 180s linear infinite;
+  opacity: 0.5;
+}
+
+.stars-layer::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: 
+    radial-gradient(1px 1px at 25% 35%, white, transparent),
+    radial-gradient(2px 2px at 55% 65%, oklch(0.85 0.08 280), transparent),
+    radial-gradient(1px 1px at 75% 25%, white, transparent),
+    radial-gradient(3px 3px at 35% 75%, oklch(0.9 0.05 290), transparent),
+    radial-gradient(1px 1px at 65% 45%, white, transparent),
+    radial-gradient(2px 2px at 45% 85%, oklch(0.85 0.08 270), transparent),
+    radial-gradient(1px 1px at 85% 55%, white, transparent),
+    radial-gradient(2px 2px at 5% 65%, oklch(0.9 0.05 285), transparent);
+  background-size: 280% 280%;
+  animation: starsMove 240s linear infinite reverse;
+  opacity: 0.4;
+}
+
+/* Nebula effect */
+.nebula {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nebula::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 20% 30%, oklch(0.4 0.15 280 / 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, oklch(0.35 0.12 290 / 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, oklch(0.3 0.1 270 / 0.12) 0%, transparent 50%);
+  animation: nebulaDrift 40s ease-in-out infinite;
+}
+
+.nebula::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 70% 40%, oklch(0.38 0.13 275 / 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 80%, oklch(0.36 0.11 285 / 0.14) 0%, transparent 45%);
+  animation: nebulaDrift 50s ease-in-out infinite reverse;
+}
+
+/* Shooting stars */
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px white);
+  animation: shootingStar 3s linear infinite;
+}
+
+@keyframes starfield {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-30%, -30%);
+    opacity: 0.7;
+  }
+}
+
+@keyframes starsMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes nebulaDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(-8%, 8%) scale(1.05) rotate(5deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(8%, -8%) scale(0.95) rotate(-5deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(-100px) translateY(-100px);
+    opacity: 1;
+    width: 100px;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px) translateY(1000px);
+    opacity: 0;
+    width: 0;
+  }
+}
+
+/* Added smooth scroll behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    filter: saturate(0.8) brightness(0.9);
+  }
+  7% {
+    transform: scale(1.15);
+    filter: saturate(1.8) brightness(1.25);
+  }
+  14% {
+    transform: scale(1);
+    filter: saturate(0.8) brightness(0.9);
+  }
+  28% {
+    transform: scale(1.15);
+    filter: saturate(1.8) brightness(1.25);
+  }
+  35% {
+    transform: scale(1);
+    filter: saturate(0.8) brightness(0.9);
+  }
+  100% {
+    transform: scale(1);
+    filter: saturate(0.8) brightness(0.9);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
