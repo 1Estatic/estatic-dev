@@ -8,269 +8,269 @@
   ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
   ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
   
-  **Portfólio pessoal moderno e responsivo construído com Next.js 15**
+  **Modern and responsive personal portfolio built with Next.js 15**
   
-  [Ver Demo](#) • [Reportar Bug](https://github.com/1Estatic/estatic-dev/issues) • [Solicitar Feature](https://github.com/1Estatic/estatic-dev/issues)
+  [View Demo](#) • [Report Bug](https://github.com/1Estatic/estatic-dev/issues) • [Request Feature](https://github.com/1Estatic/estatic-dev/issues)
   
 </div>
 
 ---
 
-## 📋 Sobre o Projeto
+## 📋 About the Project
 
-Este é meu portfólio pessoal, desenvolvido com as mais modernas tecnologias web para mostrar meus projetos e habilidades como desenvolvedor. O site apresenta um design limpo e elegante, com animações suaves, sistema de temas e uma experiência de usuário otimizada.
+This is my personal portfolio, developed with the most modern web technologies to showcase my projects and skills as a developer. The site features a clean and elegant design, with smooth animations, theme system, and an optimized user experience.
 
-### ✨ Características
+### ✨ Features
 
-- 🎨 **Design Moderno**: Interface elegante com background galáctico imersivo
-- ✨ **Estrelas Pulsantes**: Sistema de estrelas animadas estilo Grok.com com efeitos de brilho
-- 🌌 **Efeito Nebulosa**: Buracos negros animados com gradientes radiais dinâmicos
-- 📱 **Totalmente Responsivo**: Adaptado para desktop, tablet e mobile
-- ⚡ **Performance Otimizada**: Next.js 15 com React 19 para máxima performance
-- 🌙 **Sistema de Temas**: Suporte para tema claro, escuro e automático (baseado no sistema)
-- 🎯 **Navegação Suave**: Scroll suave entre seções com navbar flutuante
-- 🔄 **Animações Interativas**: Canvas HTML5 para estrelas com transições suaves
-- 📧 **Seção de Contato**: Formulário de contato integrado e links para redes sociais
-- 🎮 **Portfolio Categorizado**: Projetos organizados em Animations, Projects e College Work
-- 🖼️ **Dialogs Interativos**: Visualização expandida de projetos por categoria
-- 📊 **Estatísticas Dinâmicas**: Métricas de visitas, jogadores ativos e experiência
-- ↑ **Scroll to Top**: Botão flutuante para retornar ao topo da página
+- 🎨 **Modern Design**: Elegant interface with immersive galactic background
+- ✨ **Pulsing Stars**: Grok.com-style animated star system with glow effects
+- 🌌 **Nebula Effect**: Animated black holes with dynamic radial gradients
+- 📱 **Fully Responsive**: Adapted for desktop, tablet, and mobile
+- ⚡ **Optimized Performance**: Next.js 15 with React 19 for maximum performance
+- 🌙 **Theme System**: Support for light, dark, and automatic themes (based on system)
+- 🎯 **Smooth Navigation**: Smooth scroll between sections with floating navbar
+- 🔄 **Interactive Animations**: HTML5 Canvas for stars with smooth transitions
+- 📧 **Contact Section**: Integrated contact form and social media links
+- 🎮 **Categorized Portfolio**: Projects organized in Animations, Projects, and College Work
+- 🖼️ **Interactive Dialogs**: Expanded project view by category
+- 📊 **Dynamic Statistics**: Metrics for visits, active players, and experience
+- ↑ **Scroll to Top**: Floating button to return to the top of the page
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
 ### Frontend
-- **Next.js 15.5.4**: Framework React com App Router e Server Components
-- **React 19.1.0**: Biblioteca para interfaces de usuário com otimizações modernas
-- **TypeScript 5.9.3**: Tipagem estática para maior confiabilidade
-- **Tailwind CSS 4.1.17**: Framework CSS utilitário moderno com PostCSS
+- **Next.js 15.5.4**: React framework with App Router and Server Components
+- **React 19.1.0**: UI library with modern optimizations
+- **TypeScript 5.9.3**: Static typing for greater reliability
+- **Tailwind CSS 4.1.17**: Modern utility-first CSS framework with PostCSS
 
 ### UI Components & Libraries
-- **Radix UI**: Componentes acessíveis e customizáveis
+- **Radix UI**: Accessible and customizable components
   - Dialog, Dropdown Menu, Navigation Menu, Accordion
   - Popover, Select, Tabs, Toast, Tooltip
   - Checkbox, Radio Group, Slider, Switch
   - Avatar, Progress, Separator, Scroll Area
-- **Lucide React**: Ícones modernos e otimizados
-- **React Icons**: Ícones de marcas (Discord, GitHub, Gmail)
-- **Sonner**: Sistema de notificações toast elegante
-- **Vaul**: Drawer/Sheet component para mobile
-- **Embla Carousel**: Carousel performático e customizável
+- **Lucide React**: Modern and optimized icons
+- **React Icons**: Brand icons (Discord, GitHub, Gmail)
+- **Sonner**: Elegant toast notification system
+- **Vaul**: Drawer/Sheet component for mobile
+- **Embla Carousel**: Performant and customizable carousel
 
-### Formulários & Validação
-- **React Hook Form 7.66.0**: Gerenciamento de formulários performático
-- **Zod 3.25.76**: Schema validation TypeScript-first
-- **@hookform/resolvers 3.10.0**: Integração Zod + React Hook Form
+### Forms & Validation
+- **React Hook Form 7.66.0**: Performant form management
+- **Zod 3.25.76**: TypeScript-first schema validation
+- **@hookform/resolvers 3.10.0**: Zod + React Hook Form integration
 
 ### Data & Utilities
-- **Date-fns 4.1.0**: Manipulação moderna de datas
-- **Class Variance Authority 0.7.1**: Variantes de componentes
-- **clsx 2.1.1 & tailwind-merge 2.6.0**: Utilitários para classes CSS
+- **Date-fns 4.1.0**: Modern date manipulation
+- **Class Variance Authority 0.7.1**: Component variants
+- **clsx 2.1.1 & tailwind-merge 2.6.0**: CSS class utilities
 - **cmdk 1.0.4**: Command palette component
 
 ### Analytics & Monitoring
-- **@vercel/analytics 1.5.0**: Analytics integrado da Vercel para métricas de performance
+- **@vercel/analytics 1.5.0**: Vercel's integrated analytics for performance metrics
 
-### Design & Estilização
-- **next-themes 0.4.6**: Gerenciamento de temas (claro/escuro/sistema)
-- **Geist Font 1.5.1**: Família de fontes moderna da Vercel
-- **tailwindcss-animate 1.0.7**: Animações Tailwind pré-configuradas
-- **Recharts 2.15.4**: Biblioteca de gráficos para visualização de dados
+### Design & Styling
+- **next-themes 0.4.6**: Theme management (light/dark/system)
+- **Geist Font 1.5.1**: Modern Vercel font family
+- **tailwindcss-animate 1.0.7**: Pre-configured Tailwind animations
+- **Recharts 2.15.4**: Chart library for data visualization
 
 ### Package Manager
-- **pnpm 10.22.0**: Gerenciador de pacotes rápido e eficiente
+- **pnpm 10.22.0**: Fast and efficient package manager
 
-### Recursos e Funcionalidades
-- **App Router**: Roteamento moderno do Next.js 15
-- **Server & Client Components**: Otimização de performance com renderização híbrida
-- **Responsive Design**: Design adaptativo com Tailwind CSS
-- **Theme Switching**: Alternância entre temas com persistência
-- **Smooth Scrolling**: Navegação fluida entre seções
-- **Form Validation**: Validação robusta com Zod
-- **Accessibility**: Componentes Radix UI com foco em acessibilidade
+### Features & Functionalities
+- **App Router**: Modern Next.js 15 routing
+- **Server & Client Components**: Performance optimization with hybrid rendering
+- **Responsive Design**: Adaptive design with Tailwind CSS
+- **Theme Switching**: Theme toggling with persistence
+- **Smooth Scrolling**: Fluid navigation between sections
+- **Form Validation**: Robust validation with Zod
+- **Accessibility**: Radix UI components focused on accessibility
 
-## 🎨 Sistema de Temas
+## 🎨 Theme System
 
-O portfólio suporta três modos de tema:
-- **Claro**: Tema light otimizado para ambientes claros
-- **Escuro**: Tema dark para reduzir fadiga visual
-- **Sistema**: Sincroniza automaticamente com as preferências do sistema operacional
+The portfolio supports three theme modes:
+- **Light**: Light theme optimized for bright environments
+- **Dark**: Dark theme to reduce eye strain
+- **System**: Automatically syncs with operating system preferences
 
-A troca de tema é persistida no localStorage e sincroniza com mudanças no tema do sistema.
+Theme switching is persisted in localStorage and syncs with system theme changes.
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
 ```
 estatic-dev/
 ├── app/
-│   ├── layout.tsx          # Layout raiz com providers
-│   └── page.tsx            # Página principal do portfólio
+│   ├── layout.tsx          # Root layout with providers
+│   └── page.tsx            # Main portfolio page
 ├── components/
-│   ├── navigation.tsx      # Navbar com theme switcher
-│   ├── footer.tsx          # Footer com links e informações
-│   ├── theme-provider.tsx  # Provider para gerenciamento de temas
-│   ├── starfield.tsx       # Sistema de estrelas pulsantes com Canvas
-│   └── ui/                 # Componentes UI reutilizáveis (Radix UI)
+│   ├── navigation.tsx      # Navbar with theme switcher
+│   ├── footer.tsx          # Footer with links and information
+│   ├── theme-provider.tsx  # Provider for theme management
+│   ├── starfield.tsx       # Pulsing stars system with Canvas
+│   └── ui/                 # Reusable UI components (Radix UI)
 │       ├── button.tsx
 │       ├── card.tsx
 │       ├── dialog.tsx
 │       ├── form.tsx
-│       └── ... (50+ componentes)
+│       └── ... (50+ components)
 ├── hooks/
-│   ├── use-mobile.ts       # Hook para detecção de mobile
-│   └── use-toast.ts        # Hook para sistema de toast
+│   ├── use-mobile.ts       # Hook for mobile detection
+│   └── use-toast.ts        # Hook for toast system
 ├── lib/
-│   └── utils.ts            # Utilitários e helpers
-├── public/                 # Assets estáticos
+│   └── utils.ts            # Utilities and helpers
+├── public/                 # Static assets
 ├── styles/
-│   └── globals.css         # Estilos globais e variáveis CSS
-├── components.json         # Configuração shadcn/ui
-├── next.config.mjs         # Configuração Next.js (com allowedDevOrigins)
-├── tailwind.config.ts      # Configuração Tailwind CSS
-├── tsconfig.json           # Configuração TypeScript
-├── .gitignore              # Arquivos ignorados pelo Git
-├── pnpm-lock.yaml          # Lock file do pnpm
-└── package.json            # Dependências e scripts
+│   └── globals.css         # Global styles and CSS variables
+├── components.json         # shadcn/ui configuration
+├── next.config.mjs         # Next.js configuration (with allowedDevOrigins)
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+├── .gitignore              # Files ignored by Git
+├── pnpm-lock.yaml          # pnpm lock file
+└── package.json            # Dependencies and scripts
 ```
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### Pré-requisitos
-- **Node.js** 18.x ou superior
-- **pnpm 10.22.0** (recomendado) ou npm/yarn
+### Prerequisites
+- **Node.js** 18.x or higher
+- **pnpm 10.22.0** (recommended) or npm/yarn
 
-### Instalação do pnpm (se necessário)
+### Installing pnpm (if needed)
 ```bash
 npm install -g pnpm
 ```
 
-### Instalação do Projeto
+### Project Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
 git clone https://github.com/1Estatic/estatic-dev.git
 ```
 
-2. Navegue até o diretório:
+2. Navigate to the directory:
 ```bash
 cd estatic-dev
 ```
 
-3. Instale as dependências:
+3. Install dependencies:
 ```bash
 pnpm install
 ```
 
-4. Execute o servidor de desenvolvimento:
+4. Run the development server:
 ```bash
 pnpm dev
 ```
 
-5. Acesse no navegador:
+5. Access in browser:
 ```
 http://localhost:3000
 ```
 
-### Acesso via Rede Local
-O projeto está configurado para aceitar conexões de dispositivos na mesma rede local. Para acessar de outros dispositivos:
+### Local Network Access
+The project is configured to accept connections from devices on the same local network. To access from other devices:
 
-1. Encontre o IP da sua máquina na rede local
-2. Acesse `http://[SEU-IP]:3000` do outro dispositivo
-3. Se necessário, adicione o IP em `allowedDevOrigins` no `next.config.mjs`
+1. Find your machine's IP on the local network
+2. Access `http://[YOUR-IP]:3000` from the other device
+3. If needed, add the IP to `allowedDevOrigins` in `next.config.mjs`
 
-### Scripts Disponíveis
+### Available Scripts
 
 ```bash
-pnpm dev          # Inicia servidor de desenvolvimento
-pnpm build        # Cria build de produção
-pnpm start        # Inicia servidor de produção
-pnpm lint         # Executa linter ESLint
+pnpm dev          # Starts development server
+pnpm build        # Creates production build
+pnpm start        # Starts production server
+pnpm lint         # Runs ESLint linter
 ```
 
-## 📱 Seções do Portfólio
+## 📱 Portfolio Sections
 
 ### 🏠 Home
-- Hero section com apresentação e estatísticas
-- Métricas dinâmicas: 5.7B visitas totais, 22.8K jogadores ativos, 4+ anos de experiência, 8 jogos
-- Call-to-action buttons com animações
-- Background galáctico imersivo com buracos negros e estrelas pulsantes
-- Scroll to top button com animação de fade-in/out
+- Hero section with presentation and statistics
+- Dynamic metrics: 5.7B total visits, 22.8K active players, 4+ years experience, 8 games
+- Call-to-action buttons with animations
+- Immersive galactic background with black holes and pulsing stars
+- Scroll to top button with fade-in/out animation
 
-### 👤 Sobre
-- Informações pessoais e biografia
-- Cards de conquistas: Game Dev, Self-Taught, Soft-Skilled
-- Background blur e glassmorphism effects
+### 👤 About
+- Personal information and biography
+- Achievement cards: Game Dev, Self-Taught, Soft-Skilled
+- Background blur and glassmorphism effects
 
 ### 💡 Skills (Technical Mastery)
-- Grid de habilidades técnicas
-- Cards detalhados para:
+- Technical skills grid
+- Detailed cards for:
   - Lua Scripting (Roblox)
   - Game Design
   - Performance Optimization
   - Team Leadership
-- Descrições expandidas com ícones Lucide
+- Expanded descriptions with Lucide icons
 
 ### 🎮 Portfolio
-- **Categorias de Projetos**:
-  - **Animations**: Animações 3D (Werewolf, Wolf, Daggers R6)
-  - **Projects**: Projetos pessoais e freelance (Jogos, Portfolio)
-  - **College Work**: Trabalhos acadêmicos (OOP Python, Web Dev, Certificados)
-- Featured Highlights com preview de projetos
-- Dialog modal para visualização expandida de projetos
-- Sistema de cards interativos com hover effects
+- **Project Categories**:
+  - **Animations**: 3D Animations (Werewolf, Wolf, Daggers R6)
+  - **Projects**: Personal and freelance projects (Games, Portfolio)
+  - **College Work**: Academic work (OOP Python, Web Dev, Certificates)
+- Featured Highlights with project previews
+- Dialog modal for expanded project viewing
+- Interactive card system with hover effects
 
-### 📬 Contato
-- **Múltiplos canais de contato**:
+### 📬 Contact
+- **Multiple contact channels**:
   - Email: CorporationEstatic@gmail.com
   - Discord: @estatic.
   - GitHub: @1Estatic
-- Formulário de contato funcional com validação
-- Cards informativos com ícones React Icons
-- Integração com redes sociais
+- Functional contact form with validation
+- Informative cards with React Icons
+- Social media integration
 
-## 🎯 Funcionalidades Principais
+## 🎯 Main Features
 
-### Interface & Interação
-- **Theme Switcher**: Alternância entre light/dark/system com ícones dinâmicos
-- **Smooth Scroll**: Navegação suave entre seções com comportamento nativo
-- **Scroll to Top**: Botão flutuante que aparece ao rolar a página
-- **Responsive Navigation**: Menu adaptativo para diferentes tamanhos de tela
-- **Floating Navbar**: Navbar que aparece/desaparece no scroll
-- **Dialog Modals**: Visualização expandida de projetos por categoria
-- **Interactive Cards**: Hover effects e transições suaves com glassmorphism
-- **Toast Notifications**: Sistema de notificações com Sonner
-- **Starfield Backdrop**: Background interativo que reage ao tema
+### Interface & Interaction
+- **Theme Switcher**: Toggle between light/dark/system with dynamic icons
+- **Smooth Scroll**: Smooth navigation between sections with native behavior
+- **Scroll to Top**: Floating button that appears when scrolling the page
+- **Responsive Navigation**: Adaptive menu for different screen sizes
+- **Floating Navbar**: Navbar that appears/disappears on scroll
+- **Dialog Modals**: Expanded project view by category
+- **Interactive Cards**: Hover effects and smooth transitions with glassmorphism
+- **Toast Notifications**: Notification system with Sonner
+- **Starfield Backdrop**: Interactive background that reacts to theme
 
-### Animações & Efeitos
-- **Starfield Canvas**: Sistema de 120+ estrelas pulsantes renderizadas via Canvas HTML5
-- **Grok-style Stars**: Estrelas com animação de crescimento e brilho (inspirado em grok.com)
-- **Uniform Distribution**: Distribuição uniforme de estrelas baseada em grid
-- **Pulsing Animation**: Cada estrela pulsa independentemente com velocidade aleatória
-- **Glow Effect**: Efeito de brilho radial que cresce junto com a estrela
-- **Nebula Background**: Efeito de nebulosa com 6 buracos negros animados
-- **Black Holes**: Gradientes radiais ultra-escuros com halos coloridos (roxo, azul, rosa)
-- **Theme-aware Stars**: Estrelas brancas no dark mode, cinzas no light mode
-- **Scroll Animations**: Elementos que aparecem durante o scroll
-- **Smooth Transitions**: Transições suaves em cards e botões
-- **Glassmorphism**: Efeitos de vidro fosco (backdrop-blur) em cards
-- **Hover Effects**: Transformações suaves em elementos interativos
+### Animations & Effects
+- **Starfield Canvas**: System of 120+ pulsing stars rendered via HTML5 Canvas
+- **Grok-style Stars**: Stars with growth and glow animation (inspired by grok.com)
+- **Uniform Distribution**: Uniform star distribution based on grid
+- **Pulsing Animation**: Each star pulses independently with random speed
+- **Glow Effect**: Radial glow effect that grows with the star
+- **Nebula Background**: Nebula effect with 6 animated black holes
+- **Black Holes**: Ultra-dark radial gradients with colored halos (purple, blue, pink)
+- **Theme-aware Stars**: White stars in dark mode, gray in light mode
+- **Scroll Animations**: Elements that appear during scroll
+- **Smooth Transitions**: Smooth transitions on cards and buttons
+- **Glassmorphism**: Frosted glass effects (backdrop-blur) on cards
+- **Hover Effects**: Smooth transformations on interactive elements
 
-### Formulários
-- **React Hook Form**: Gerenciamento otimizado de formulários
-- **Zod Validation**: Validação de schema TypeScript-first
-- **Input Validation**: Feedback visual em tempo real
-- **Form Submission**: Preparado para integração com backend
+### Forms
+- **React Hook Form**: Optimized form management
+- **Zod Validation**: TypeScript-first schema validation
+- **Input Validation**: Real-time visual feedback
+- **Form Submission**: Ready for backend integration
 
 ### Performance
-- **Next.js 15 App Router**: Roteamento otimizado e code splitting automático
-- **Server Components**: Renderização no servidor para melhor performance
-- **Canvas Rendering**: Estrelas renderizadas via Canvas HTML5 com requestAnimationFrame
-- **Efficient Animation**: 120+ estrelas animadas sem impacto na performance
-- **Theme Detection**: Sistema de temas com detecção automática de preferências do sistema
-- **Responsive Canvas**: Canvas redimensionável que se adapta ao tamanho da tela
-- **Image Optimization**: Otimização automática de imagens com next/image
-- **Vercel Analytics**: Métricas de performance e Web Vitals em tempo real
-- **Tailwind CSS Purge**: CSS otimizado com remoção automática de código não utilizado
-- **pnpm**: Gerenciamento eficiente de dependências com cache global
+- **Next.js 15 App Router**: Optimized routing and automatic code splitting
+- **Server Components**: Server-side rendering for better performance
+- **Canvas Rendering**: Stars rendered via HTML5 Canvas with requestAnimationFrame
+- **Efficient Animation**: 120+ animated stars with no performance impact
+- **Theme Detection**: Theme system with automatic system preference detection
+- **Responsive Canvas**: Resizable canvas that adapts to screen size
+- **Image Optimization**: Automatic image optimization with next/image
+- **Vercel Analytics**: Real-time performance metrics and Web Vitals
+- **Tailwind CSS Purge**: Optimized CSS with automatic unused code removal
+- **pnpm**: Efficient dependency management with global cache
 
 ## 🌐 Compatibilidade
 
@@ -298,75 +298,75 @@ Para personalizar o portfólio:
 1. **Informações Pessoais**: Edite `app/page.tsx` para atualizar textos e descrições
 2. **Projetos**: Modifique o array `projectCategories` em `app/page.tsx`
 3. **Estatísticas**: Atualize os valores em `app/page.tsx` na seção Hero
-4. **Links de Contato**: Modifique os contatos em `app/page.tsx` e `components/footer.tsx`
+4. **Contact Links**: Modify contacts in `app/page.tsx` and `components/footer.tsx`
 
-### Estilos
-1. **Tema Global**: Configure variáveis CSS em `styles/globals.css`
-2. **Tailwind Config**: Personalize cores e breakpoints em `tailwind.config.ts`
-3. **Componentes UI**: Customize componentes em `components/ui/`
+### Styles
+1. **Global Theme**: Configure CSS variables in `styles/globals.css`
+2. **Tailwind Config**: Customize colors and breakpoints in `tailwind.config.ts`
+3. **UI Components**: Customize components in `components/ui/`
 
-### Funcionalidades
-1. **Adicionar Seções**: Crie novos componentes e importe em `app/page.tsx`
-2. **Novos Componentes UI**: Use shadcn/ui CLI ou adicione manualmente
-3. **Analytics**: Configure `@vercel/analytics` para seu domínio
+### Features
+1. **Add Sections**: Create new components and import in `app/page.tsx`
+2. **New UI Components**: Use shadcn/ui CLI or add manually
+3. **Analytics**: Configure `@vercel/analytics` for your domain
 
-### Adicionar Componentes shadcn/ui
+### Adding shadcn/ui Components
 ```bash
-# Exemplo de como adicionar um novo componente
+# Example of how to add a new component
 pnpm dlx shadcn@latest add [component-name]
 ```
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+Contributions are welcome! Feel free to:
 
-1. Fazer um Fork do projeto
-2. Criar uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
+1. Fork the project
+2. Create a Branch for your Feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado)
-O projeto está otimizado para deploy na Vercel:
+### Vercel (Recommended)
+The project is optimized for Vercel deployment:
 
 ```bash
-# Instale a CLI da Vercel
+# Install Vercel CLI
 pnpm add -g vercel
 
 # Deploy
 vercel
 ```
 
-### Outras Plataformas
-- **Netlify**: Compatível com builds Next.js
-- **Railway**: Suporte para SSR e APIs
-- **AWS Amplify**: Deploy automático via Git
-- **Cloudflare Pages**: Suporte para Next.js com Workers
+### Other Platforms
+- **Netlify**: Compatible with Next.js builds
+- **Railway**: Support for SSR and APIs
+- **AWS Amplify**: Automatic deployment via Git
+- **Cloudflare Pages**: Next.js support with Workers
 
-### Build Local
+### Local Build
 ```bash
-# Criar build de produção
+# Create production build
 pnpm build
 
-# Testar build localmente
+# Test build locally
 pnpm start
 ```
 
-## ⚙️ Configurações Importantes
+## ⚙️ Important Configurations
 
 ### Next.js Config (`next.config.mjs`)
 ```javascript
 {
   typescript: {
-    ignoreBuildErrors: true  // Ignora erros de TypeScript no build
+    ignoreBuildErrors: true  // Ignores TypeScript errors in build
   },
   images: {
-    unoptimized: true  // Imagens sem otimização (para exports estáticos)
+    unoptimized: true  // Unoptimized images (for static exports)
   },
   allowedDevOrigins: [
-    // IPs permitidos para acesso via rede local em desenvolvimento
+    // Allowed IPs for local network access in development
     'http://26.204.26.123:3000',
     '26.204.26.123'
   ]
@@ -374,16 +374,16 @@ pnpm start
 ```
 
 ### .gitignore
-O projeto inclui um `.gitignore` completo que ignora:
-- 📁 `/.next/` - Build e cache do Next.js
-- 📁 `node_modules/` - Dependências
-- 🔐 `.env*` - Variáveis de ambiente
-- 🗃️ Logs e arquivos temporários
-- 💻 Configurações de IDE
+The project includes a complete `.gitignore` that ignores:
+- 📁 `/.next/` - Next.js build and cache
+- 📁 `node_modules/` - Dependencies
+- 🔐 `.env*` - Environment variables
+- 🗃️ Logs and temporary files
+- 💻 IDE configurations
 
-## 📦 Componentes UI Incluídos
+## 📦 Included UI Components
 
-O projeto inclui mais de 50 componentes UI customizados baseados em Radix UI:
+The project includes over 50 custom UI components based on Radix UI:
 
 - ✅ Accordion, Alert, Alert Dialog
 - ✅ Avatar, Badge, Breadcrumb
@@ -404,13 +404,13 @@ O projeto inclui mais de 50 componentes UI customizados baseados em Radix UI:
 - ✅ Toast, Toggle, Toggle Group
 - ✅ Tooltip
 
-Todos os componentes são totalmente customizáveis via Tailwind CSS e Class Variance Authority.
+All components are fully customizable via Tailwind CSS and Class Variance Authority.
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+This project is under the MIT license. See the `LICENSE` file for more details.
 
-## 👤 Autor
+## 👤 Author
 
 **Estatic**
 
@@ -419,34 +419,34 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 - Discord: @estatic.
 - Portfolio: [estatic-dev](https://github.com/1Estatic/estatic-dev)
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgments
 
-- Inspirado no portfólio do [Stackyz](https://www.stackyz.dev)
-- [shadcn/ui](https://ui.shadcn.com/) pela biblioteca de componentes
-- [Radix UI](https://www.radix-ui.com/) pelos primitivos acessíveis
-- [Lucide Icons](https://lucide.dev/) pelos ícones modernos
-- [Vercel](https://vercel.com/) pelo hosting e analytics
-- [Tailwind CSS](https://tailwindcss.com/) pelo framework CSS
-- Comunidade Next.js e React
+- Inspired by [Stackyz](https://www.stackyz.dev) portfolio
+- [shadcn/ui](https://ui.shadcn.com/) for the component library
+- [Radix UI](https://www.radix-ui.com/) for accessible primitives
+- [Lucide Icons](https://lucide.dev/) for modern icons
+- [Vercel](https://vercel.com/) for hosting and analytics
+- [Tailwind CSS](https://tailwindcss.com/) for the CSS framework
+- Next.js and React community
 
-## 🔧 Tecnologias e Versões
+## 🔧 Technologies and Versions
 
-| Tecnologia | Versão | Descrição |
-|------------|--------|-----------|
-| Next.js | 15.5.4 | Framework React |
-| React | 19.1.0 | Biblioteca UI |
-| TypeScript | 5.9.3 | Linguagem |
-| Tailwind CSS | 4.1.17 | Framework CSS |
+| Technology | Version | Description |
+|------------|---------|-------------|
+| Next.js | 15.5.4 | React Framework |
+| React | 19.1.0 | UI Library |
+| TypeScript | 5.9.3 | Language |
+| Tailwind CSS | 4.1.17 | CSS Framework |
 | pnpm | 10.22.0 | Package Manager |
-| Node.js | 18+ | Runtime JavaScript |
+| Node.js | 18+ | JavaScript Runtime |
 
 ---
 
 <div align="center">
   
-  **Feito com ❤️ e ☕ por Estatic**
+  **Made with ❤️ and ☕ by Estatic**
   
-  ⭐ Se você gostou deste projeto, considere dar uma estrela!
+  ⭐ If you liked this project, consider giving it a star!
   
   ![Next.js](https://img.shields.io/badge/Powered%20by-Next.js-black?style=flat-square&logo=next.js)
   ![React](https://img.shields.io/badge/Built%20with-React%2019-61DAFB?style=flat-square&logo=react)
