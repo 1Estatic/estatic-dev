@@ -14,6 +14,7 @@ interface Star {
   pulseSpeed: number;
   pulsePhase: number;
   color: string;
+  velocity: number; // Movement speed
 }
 
 export function Starfield() {
@@ -39,7 +40,7 @@ export function Starfield() {
     // Initialize stars with uniform distribution
     const initStars = () => {
       const stars: Star[] = [];
-      const numStars = 45;
+      const numStars = 75;
       const isDark = resolvedTheme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
       
       // Create grid-based distribution for uniformity
@@ -56,7 +57,7 @@ export function Starfield() {
           const x = j * cellWidth + Math.random() * cellWidth;
           const y = i * cellHeight + Math.random() * cellHeight;
           
-          const baseSize = 0.25 * Math.random();
+          const baseSize = 0.35 * Math.random();
           const maxSize = baseSize * (2 + Math.random() * 2);
           const baseOpacity = 0.3 + Math.random() * 0.3;
           
@@ -73,12 +74,13 @@ export function Starfield() {
               color = 'rgba(180, 220, 255, 1)'; // Blue tint
             }
           } else {
+            // Light theme: subtle pastel colors with better contrast
             if (colorChoice < 0.7) {
-              color = 'rgba(100, 100, 120, 1)';
+              color = 'rgba(70, 80, 120, 1)'; // Soft blue-gray
             } else if (colorChoice < 0.85) {
-              color = 'rgba(120, 100, 150, 1)'; // Purple tint
+              color = 'rgba(100, 70, 120, 1)'; // Soft purple
             } else {
-              color = 'rgba(100, 120, 150, 1)'; // Blue tint
+              color = 'rgba(80, 100, 130, 1)'; // Soft steel blue
             }
           }
           
@@ -93,6 +95,7 @@ export function Starfield() {
             pulseSpeed: 0.0005 + Math.random() * 0.001, // Slow pulse
             pulsePhase: Math.random() * Math.PI * 2,
             color,
+            velocity: 0.1 + Math.random() * 0.03, // Random movement speed
           });
         }
       }
@@ -105,6 +108,24 @@ export function Starfield() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       starsRef.current.forEach((star) => {
+        // Move star diagonally (bottom-left to top-right)
+        star.x += star.velocity;
+        star.y -= star.velocity;
+        
+        // Wrap around when star goes off screen
+        if (star.x > canvas.width + 50) {
+          star.x = -50;
+        }
+        if (star.x < -50) {
+          star.x = canvas.width + 50;
+        }
+        if (star.y < -50) {
+          star.y = canvas.height + 50;
+        }
+        if (star.y > canvas.height + 50) {
+          star.y = -50;
+        }
+        
         // Calculate pulsing effect
         const pulseProgress = Math.sin(timestamp * star.pulseSpeed + star.pulsePhase);
         const normalizedPulse = (pulseProgress + 1) / 2; // Convert from [-1, 1] to [0, 1]
