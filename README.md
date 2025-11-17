@@ -272,17 +272,17 @@ pnpm lint         # Runs ESLint linter
 - **Tailwind CSS Purge**: Optimized CSS with automatic unused code removal
 - **pnpm**: Efficient dependency management with global cache
 
-## 🌐 Compatibilidade
+## 🌐 Compatibility
 
-| Navegador | Versão Mínima | Status |
-|-----------|---------------|---------|
-| Chrome | 100+ | ✅ Totalmente Suportado |
-| Firefox | 100+ | ✅ Totalmente Suportado |
-| Safari | 15.4+ | ✅ Totalmente Suportado |
-| Edge | 100+ | ✅ Totalmente Suportado |
-| Opera | 86+ | ✅ Totalmente Suportado |
+| Browser | Minimum Version | Status |
+|---------|----------------|---------|
+| Chrome | 100+ | ✅ Fully Supported |
+| Firefox | 100+ | ✅ Fully Supported |
+| Safari | 15.4+ | ✅ Fully Supported |
+| Edge | 100+ | ✅ Fully Supported |
+| Opera | 86+ | ✅ Fully Supported |
 
-**Requisitos de Funcionalidades Modernas:**
+**Modern Feature Requirements:**
 - CSS Container Queries
 - CSS backdrop-filter
 - ES2022+ JavaScript
@@ -290,14 +290,14 @@ pnpm lint         # Runs ESLint linter
 - CSS Custom Properties
 - React 19 features
 
-## 📝 Personalização
+## 📝 Customization
 
-Para personalizar o portfólio:
+To customize the portfolio:
 
-### Conteúdo
-1. **Informações Pessoais**: Edite `app/page.tsx` para atualizar textos e descrições
-2. **Projetos**: Modifique o array `projectCategories` em `app/page.tsx`
-3. **Estatísticas**: Atualize os valores em `app/page.tsx` na seção Hero
+### Content
+1. **Personal Information**: Edit `app/page.tsx` to update texts and descriptions
+2. **Projects**: Modify the `projectCategories` array in `app/page.tsx`
+3. **Statistics**: Update values in `app/page.tsx` Hero section
 4. **Contact Links**: Modify contacts in `app/page.tsx` and `components/footer.tsx`
 
 ### Styles
