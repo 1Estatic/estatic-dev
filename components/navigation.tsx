@@ -1,9 +1,8 @@
 "use client"
 
-import type React from "react"
+import { useState, useEffect } from "react"
 import { Home, User, Zap, Gamepad2, MessageSquare, Moon, Sun, Monitor } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { useState, useEffect } from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,

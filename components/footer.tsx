@@ -1,10 +1,11 @@
 "use client"
 
+import type { MouseEvent } from 'react'
 import { Heart, Code } from 'lucide-react'
 import { SiDiscord, SiGithub, SiGmail } from 'react-icons/si'
 
 export function Footer() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleScroll = (e: MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
     const element = document.getElementById(targetId)
     if (element) {

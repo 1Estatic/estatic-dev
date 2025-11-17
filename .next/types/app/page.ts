@@ -1,4 +1,4 @@
-// File: C:\Users\asout\Desktop\VSCode things\EstaticPortfolio\app\page.tsx
+// File: C:\Users\asout\Desktop\VSCode things\estatic-dev\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
