@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { Eye, Users, Calendar, Trophy, Play, ArrowDown, Code, Gamepad2, Lightbulb, Palette, Zap, Mail, MessageCircle, Send, ExternalLink, PocketKnife as Knife, Headphones, BookOpen, Film, FolderOpen, GraduationCap, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Eye, Users, Calendar, Trophy, Play, ArrowDown, Code, Gamepad2, Lightbulb, Palette, Zap, Mail, MessageCircle, Send, ExternalLink, PocketKnife as Knife, Headphones, BookOpen, Film, FolderOpen, GraduationCap, X, ArrowUp } from 'lucide-react'
 import { SiDiscord, SiGithub, SiGmail } from 'react-icons/si'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -11,6 +11,20 @@ import Footer from '@/components/footer'
 
 export default function Home() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const projectCategories = [
     {
@@ -102,7 +116,7 @@ export default function Home() {
   const expandedCategoryData = projectCategories.find(cat => cat.id === expandedCategory)
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen text-foreground">
       <div className="stars-layer" />
       <div className="nebula" />
       <Navigation />
@@ -146,7 +160,7 @@ export default function Home() {
             ].map((stat, i) => {
               const Icon = stat.icon
               return (
-                <div key={i} className="p-4 rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+                <div key={i} className="p-4 rounded-lg border border-border bg-card/80 backdrop-blur-md hover:border-primary/50 transition-colors shadow-sm">
                   <Icon className="w-6 h-6 text-primary mx-auto mb-2" />
                   <p className="text-lg font-bold text-primary">{stat.label}</p>
                   <p className="text-xs text-muted-foreground">{stat.value}</p>
@@ -169,7 +183,7 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl font-bold text-balance">Hardworking Developer</h2>
           </div>
 
-          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 p-12 mb-8">
+          <Card className="overflow-hidden bg-card/80 backdrop-blur-md border-border p-12 mb-8 shadow-lg">
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-4">About Me</h3>
@@ -198,7 +212,7 @@ export default function Home() {
             ].map((achievement, i) => {
               const Icon = achievement.icon
               return (
-                <Card key={i} className="bg-card/50 backdrop-blur-sm border-border/50 p-6 hover:border-primary/50 transition-colors">
+                <Card key={i} className="bg-card/80 backdrop-blur-md border-border p-6 hover:border-primary/50 transition-colors shadow-sm">
                   <Icon className="w-8 h-8 text-primary mb-3" />
                   <h4 className="font-semibold text-primary mb-2">{achievement.title}</h4>
                   <p className="text-sm text-muted-foreground">{achievement.description}</p>
@@ -244,7 +258,7 @@ export default function Home() {
             ].map((skill, i) => {
               const Icon = skill.icon
               return (
-                <Card key={i} className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all p-8">
+                <Card key={i} className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all p-8 shadow-sm">
                   <Icon className="w-12 h-12 text-primary mb-4" />
                   <h3 className="text-2xl font-bold text-primary mb-3">{skill.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{skill.description}</p>
@@ -272,7 +286,7 @@ export default function Home() {
               return (
                 <Card
                   key={category.id}
-                  className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all cursor-pointer group"
+                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm"
                   onClick={() => setExpandedCategory(category.id)}
                 >
                   <div className="p-8 space-y-4">
@@ -305,7 +319,7 @@ export default function Home() {
               {projectCategories.map((category) => (
                 <Card
                   key={`highlight-${category.id}`}
-                  className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all cursor-pointer group"
+                  className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all cursor-pointer group shadow-sm"
                   onClick={() => setExpandedCategory(category.id)}
                 >
                   <div className="relative aspect-video overflow-hidden">
@@ -381,7 +395,7 @@ export default function Home() {
               ].map((contact, i) => {
                 const Icon = contact.icon
                 return (
-                  <Card key={i} className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all p-5 flex-1">
+                  <Card key={i} className="overflow-hidden bg-card/80 backdrop-blur-md border-border hover:border-primary/50 transition-all p-5 flex-1 shadow-sm">
                     <div className="flex flex-col h-full">
                       <div className="flex gap-3 mb-3">
                         <div className={`w-10 h-10 rounded-lg bg-linear-to-br ${contact.color} flex items-center justify-center shrink-0`}>
@@ -404,7 +418,7 @@ export default function Home() {
             </div>
 
             {/* Contact Form */}
-            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 p-8">
+            <Card className="overflow-hidden bg-card/80 backdrop-blur-md border-border p-8 shadow-lg">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Send a Message</h3>
@@ -471,7 +485,7 @@ export default function Home() {
 
               <div className="grid md:grid-cols-2 gap-6 mt-6">
                 {expandedCategoryData.projects.map((project) => (
-                  <Card key={project.id} className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50">
+                  <Card key={project.id} className="overflow-hidden bg-card/80 backdrop-blur-md border-border shadow-sm">
                     <div className="aspect-video overflow-hidden">
                       <img
                         src={project.image || "/placeholder.svg"}
@@ -490,6 +504,18 @@ export default function Home() {
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 p-4 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="w-6 h-6 group-hover:animate-bounce" />
+        </button>
+      )}
+
       <Footer />
     </main>
   )

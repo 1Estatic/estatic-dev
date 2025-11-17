@@ -22,16 +22,19 @@ Este é meu portfólio pessoal, desenvolvido com as mais modernas tecnologias we
 
 ### ✨ Características
 
-- 🎨 **Design Moderno**: Interface elegante com efeitos de nebulosa e estrelas animadas
+- 🎨 **Design Moderno**: Interface elegante com background galáctico imersivo
+- ✨ **Estrelas Pulsantes**: Sistema de estrelas animadas estilo Grok.com com efeitos de brilho
+- 🌌 **Efeito Nebulosa**: Buracos negros animados com gradientes radiais dinâmicos
 - 📱 **Totalmente Responsivo**: Adaptado para desktop, tablet e mobile
 - ⚡ **Performance Otimizada**: Next.js 15 com React 19 para máxima performance
 - 🌙 **Sistema de Temas**: Suporte para tema claro, escuro e automático (baseado no sistema)
 - 🎯 **Navegação Suave**: Scroll suave entre seções com navbar flutuante
-- 🔄 **Animações Interativas**: Transições e efeitos visuais modernos
+- 🔄 **Animações Interativas**: Canvas HTML5 para estrelas com transições suaves
 - 📧 **Seção de Contato**: Formulário de contato integrado e links para redes sociais
 - 🎮 **Portfolio Categorizado**: Projetos organizados em Animations, Projects e College Work
 - 🖼️ **Dialogs Interativos**: Visualização expandida de projetos por categoria
 - 📊 **Estatísticas Dinâmicas**: Métricas de visitas, jogadores ativos e experiência
+- ↑ **Scroll to Top**: Botão flutuante para retornar ao topo da página
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -105,6 +108,7 @@ estatic-dev/
 │   ├── navigation.tsx      # Navbar com theme switcher
 │   ├── footer.tsx          # Footer com links e informações
 │   ├── theme-provider.tsx  # Provider para gerenciamento de temas
+│   ├── starfield.tsx       # Sistema de estrelas pulsantes com Canvas
 │   └── ui/                 # Componentes UI reutilizáveis (Radix UI)
 │       ├── button.tsx
 │       ├── card.tsx
@@ -188,7 +192,8 @@ pnpm lint         # Executa linter ESLint
 - Hero section com apresentação e estatísticas
 - Métricas dinâmicas: 5.7B visitas totais, 22.8K jogadores ativos, 4+ anos de experiência, 8 jogos
 - Call-to-action buttons com animações
-- Design com efeitos de nebulosa e estrelas animadas
+- Background galáctico imersivo com buracos negros e estrelas pulsantes
+- Scroll to top button com animação de fade-in/out
 
 ### 👤 Sobre
 - Informações pessoais e biografia
@@ -227,19 +232,27 @@ pnpm lint         # Executa linter ESLint
 ### Interface & Interação
 - **Theme Switcher**: Alternância entre light/dark/system com ícones dinâmicos
 - **Smooth Scroll**: Navegação suave entre seções com comportamento nativo
+- **Scroll to Top**: Botão flutuante que aparece ao rolar a página
 - **Responsive Navigation**: Menu adaptativo para diferentes tamanhos de tela
 - **Floating Navbar**: Navbar que aparece/desaparece no scroll
 - **Dialog Modals**: Visualização expandida de projetos por categoria
-- **Interactive Cards**: Hover effects e transições suaves
+- **Interactive Cards**: Hover effects e transições suaves com glassmorphism
 - **Toast Notifications**: Sistema de notificações com Sonner
+- **Starfield Backdrop**: Background interativo que reage ao tema
 
 ### Animações & Efeitos
-- **Nebula Background**: Efeito de nebulosa animada no fundo
-- **Stars Layer**: Camada de estrelas decorativas
+- **Starfield Canvas**: Sistema de 120+ estrelas pulsantes renderizadas via Canvas HTML5
+- **Grok-style Stars**: Estrelas com animação de crescimento e brilho (inspirado em grok.com)
+- **Uniform Distribution**: Distribuição uniforme de estrelas baseada em grid
+- **Pulsing Animation**: Cada estrela pulsa independentemente com velocidade aleatória
+- **Glow Effect**: Efeito de brilho radial que cresce junto com a estrela
+- **Nebula Background**: Efeito de nebulosa com 6 buracos negros animados
+- **Black Holes**: Gradientes radiais ultra-escuros com halos coloridos (roxo, azul, rosa)
+- **Theme-aware Stars**: Estrelas brancas no dark mode, cinzas no light mode
 - **Scroll Animations**: Elementos que aparecem durante o scroll
-- **Gradient Effects**: Gradientes animados e dinâmicos
-- **Glassmorphism**: Efeitos de vidro fosco (backdrop-blur)
-- **Hover Transitions**: Transformações suaves em cards e botões
+- **Smooth Transitions**: Transições suaves em cards e botões
+- **Glassmorphism**: Efeitos de vidro fosco (backdrop-blur) em cards
+- **Hover Effects**: Transformações suaves em elementos interativos
 
 ### Formulários
 - **React Hook Form**: Gerenciamento otimizado de formulários
@@ -250,6 +263,10 @@ pnpm lint         # Executa linter ESLint
 ### Performance
 - **Next.js 15 App Router**: Roteamento otimizado e code splitting automático
 - **Server Components**: Renderização no servidor para melhor performance
+- **Canvas Rendering**: Estrelas renderizadas via Canvas HTML5 com requestAnimationFrame
+- **Efficient Animation**: 120+ estrelas animadas sem impacto na performance
+- **Theme Detection**: Sistema de temas com detecção automática de preferências do sistema
+- **Responsive Canvas**: Canvas redimensionável que se adapta ao tamanho da tela
 - **Image Optimization**: Otimização automática de imagens com next/image
 - **Vercel Analytics**: Métricas de performance e Web Vitals em tempo real
 - **Tailwind CSS Purge**: CSS otimizado com remoção automática de código não utilizado

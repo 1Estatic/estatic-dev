@@ -125,6 +125,55 @@
     overflow-x: hidden;
   }
   
+  /* Star pulse animations - Grok-style */
+  @keyframes starPulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+      filter: brightness(1.8);
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0.4;
+    }
+  }
+  
+  @keyframes starPulse2 {
+    0% {
+      transform: scale(0.7);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.6);
+      opacity: 1;
+      filter: brightness(2);
+    }
+    100% {
+      transform: scale(0.7);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes starPulse3 {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 1;
+      filter: brightness(1.6);
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+  }
+  
   /* Galactic background */
   body::before {
     content: "";
@@ -133,102 +182,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -2;
-    background: radial-gradient(ellipse at top, oklch(0.2 0.08 270) 0%, oklch(0.145 0.02 270) 50%, oklch(0.1 0.02 260) 100%);
-    pointer-events: none;
-  }
-  
-  /* Stars layer 1 - small twinkling stars */
-  body::after {
-    content: "";
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    z-index: -1;
-    background-image: 
-      radial-gradient(1px 1px at 20% 30%, white, transparent),
-      radial-gradient(1px 1px at 60% 70%, white, transparent),
-      radial-gradient(2px 2px at 50% 50%, oklch(0.8 0.1 280), transparent),
-      radial-gradient(1px 1px at 80% 10%, white, transparent),
-      radial-gradient(2px 2px at 90% 60%, oklch(0.8 0.1 290), transparent),
-      radial-gradient(1px 1px at 33% 80%, white, transparent),
-      radial-gradient(1px 1px at 15% 90%, white, transparent),
-      radial-gradient(2px 2px at 45% 20%, white, transparent),
-      radial-gradient(1px 1px at 70% 40%, oklch(0.8 0.1 270), transparent),
-      radial-gradient(1px 1px at 25% 60%, white, transparent),
-      radial-gradient(1px 1px at 95% 25%, white, transparent),
-      radial-gradient(2px 2px at 10% 45%, oklch(0.8 0.1 285), transparent),
-      radial-gradient(1px 1px at 65% 85%, white, transparent),
-      radial-gradient(1px 1px at 35% 15%, white, transparent),
-      radial-gradient(2px 2px at 75% 55%, white, transparent);
-    background-size: 250% 250%, 270% 270%, 230% 230%, 290% 290%, 260% 260%, 240% 240%, 280% 280%, 250% 250%, 265% 265%, 255% 255%, 275% 275%, 245% 245%, 285% 285%, 235% 235%, 295% 295%;
-    background-position: 0% 0%;
-    opacity: 1;
-    animation: starfield 120s linear infinite;
+    z-index: -10;
+    background: radial-gradient(ellipse at top, oklch(0.75 0.08 220) 0%, oklch(0.85 0.05 240) 50%, oklch(0.92 0.02 260) 100%);
     pointer-events: none;
   }
   
   .dark body::before {
-    background: radial-gradient(ellipse at top, oklch(0.15 0.05 260) 0%, oklch(0.08 0.02 270) 50%, oklch(0.05 0 0) 100%);
+    background: radial-gradient(ellipse at top, oklch(0.12 0.03 270) 0%, oklch(0.08 0.01 270) 50%, oklch(0.05 0 0) 100%);
   }
-}
-
-/* Stars layer 2 - moving stars */
-.stars-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.stars-layer::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  background-image: 
-    radial-gradient(2px 2px at 10% 20%, oklch(0.9 0.05 280), transparent),
-    radial-gradient(1px 1px at 30% 40%, white, transparent),
-    radial-gradient(3px 3px at 50% 60%, oklch(0.85 0.08 290), transparent),
-    radial-gradient(1px 1px at 70% 80%, white, transparent),
-    radial-gradient(2px 2px at 90% 10%, oklch(0.9 0.05 270), transparent),
-    radial-gradient(1px 1px at 15% 70%, white, transparent),
-    radial-gradient(2px 2px at 85% 30%, oklch(0.85 0.08 285), transparent),
-    radial-gradient(1px 1px at 40% 90%, white, transparent),
-    radial-gradient(3px 3px at 60% 15%, oklch(0.9 0.05 275), transparent),
-    radial-gradient(1px 1px at 20% 50%, white, transparent);
-  background-size: 300% 300%;
-  animation: starsMove 180s linear infinite;
-  opacity: 0.8;
-}
-
-.stars-layer::after {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  background-image: 
-    radial-gradient(1px 1px at 25% 35%, white, transparent),
-    radial-gradient(2px 2px at 55% 65%, oklch(0.85 0.08 280), transparent),
-    radial-gradient(1px 1px at 75% 25%, white, transparent),
-    radial-gradient(3px 3px at 35% 75%, oklch(0.9 0.05 290), transparent),
-    radial-gradient(1px 1px at 65% 45%, white, transparent),
-    radial-gradient(2px 2px at 45% 85%, oklch(0.85 0.08 270), transparent),
-    radial-gradient(1px 1px at 85% 55%, white, transparent),
-    radial-gradient(2px 2px at 5% 65%, oklch(0.9 0.05 285), transparent);
-  background-size: 280% 280%;
-  animation: starsMove 240s linear infinite reverse;
-  opacity: 0.7;
 }
 
 /* Nebula effect */
@@ -238,7 +199,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -5;
   pointer-events: none;
   overflow: hidden;
 }
@@ -251,9 +212,9 @@
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 30% 25%, oklch(0 0 0) 0%, oklch(0 0 0) 3%, oklch(0.25 0.15 330 / 0.9) 5%, oklch(0.35 0.2 300 / 0.7) 10%, oklch(0.4 0.25 280 / 0.5) 15%, transparent 30%),
-    radial-gradient(circle at 75% 70%, oklch(0 0 0) 0%, oklch(0 0 0) 4%, oklch(0.3 0.18 320 / 0.85) 6%, oklch(0.4 0.22 290 / 0.65) 12%, oklch(0.45 0.25 270 / 0.45) 18%, transparent 35%),
-    radial-gradient(ellipse at 60% 40%, oklch(0.35 0.2 310 / 0.3) 0%, transparent 40%);
+    radial-gradient(circle at 25% 20%, oklch(0 0 0) 0%, oklch(0 0 0) 1.5%, oklch(0.18 0.12 330 / 0.6) 2.5%, oklch(0.25 0.15 300 / 0.4) 5%, oklch(0.3 0.18 280 / 0.25) 8%, transparent 15%),
+    radial-gradient(circle at 78% 75%, oklch(0 0 0) 0%, oklch(0 0 0) 2%, oklch(0.2 0.13 320 / 0.55) 3%, oklch(0.28 0.16 290 / 0.35) 6%, oklch(0.32 0.18 270 / 0.2) 10%, transparent 18%),
+    radial-gradient(ellipse at 60% 35%, oklch(0.22 0.14 310 / 0.15) 0%, transparent 25%);
   animation: nebulaDrift 40s ease-in-out infinite;
 }
 
@@ -265,44 +226,11 @@
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 50% 50%, oklch(0 0 0) 0%, oklch(0 0 0) 2.5%, oklch(0.28 0.16 315 / 0.95) 4.5%, oklch(0.38 0.21 295 / 0.75) 9%, oklch(0.42 0.24 275 / 0.55) 14%, transparent 28%),
-    radial-gradient(circle at 15% 60%, oklch(0 0 0) 0%, oklch(0 0 0) 3.5%, oklch(0.32 0.19 305 / 0.8) 5.5%, oklch(0.4 0.23 285 / 0.6) 11%, transparent 25%),
-    radial-gradient(ellipse at 85% 30%, oklch(0.38 0.22 300 / 0.35) 0%, transparent 38%),
-    radial-gradient(ellipse at 40% 85%, oklch(0.36 0.2 310 / 0.3) 0%, transparent 35%);
+    radial-gradient(circle at 50% 55%, oklch(0 0 0) 0%, oklch(0 0 0) 1.2%, oklch(0.19 0.13 315 / 0.65) 2.2%, oklch(0.26 0.16 295 / 0.45) 4.5%, oklch(0.3 0.18 275 / 0.3) 7%, transparent 14%),
+    radial-gradient(circle at 12% 65%, oklch(0 0 0) 0%, oklch(0 0 0) 1.8%, oklch(0.21 0.14 305 / 0.5) 3%, oklch(0.27 0.17 285 / 0.3) 5.5%, transparent 12%),
+    radial-gradient(ellipse at 88% 25%, oklch(0.24 0.15 300 / 0.2) 0%, transparent 22%),
+    radial-gradient(ellipse at 35% 88%, oklch(0.22 0.14 310 / 0.15) 0%, transparent 20%);
   animation: nebulaDrift 50s ease-in-out infinite reverse;
-}
-
-/* Shooting stars */
-.shooting-star {
-  position: absolute;
-  height: 2px;
-  background: linear-gradient(90deg, white, transparent);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 6px white);
-  animation: shootingStar 3s linear infinite;
-}
-
-@keyframes starfield {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    transform: translate(-30%, -30%);
-    opacity: 0.7;
-  }
-}
-
-@keyframes starsMove {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 @keyframes nebulaDrift {
@@ -325,22 +253,6 @@
     transform: translate(-3%, -3%) scale(1.02) rotate(2deg);
     opacity: 0.95;
     filter: brightness(1.05);
-  }
-}
-
-@keyframes shootingStar {
-  0% {
-    transform: translateX(-100px) translateY(-100px);
-    opacity: 1;
-    width: 100px;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(1000px) translateY(1000px);
-    opacity: 0;
-    width: 0;
   }
 }
 
