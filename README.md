@@ -399,7 +399,7 @@ All components are fully customizable via Tailwind CSS and Class Variance Author
 
 ## 📄 License
 
-This project is under the MIT license. See the `LICENSE` file for more details.
+This project is proprietary software. All rights reserved. Use, modification, or distribution requires prior written permission from the author. See the `LICENSE` file for more details.
 
 ## 👤 Author
 
