@@ -399,7 +399,9 @@ All components are fully customizable via Tailwind CSS and Class Variance Author
 
 ## 📄 License
 
-This project is proprietary software. All rights reserved. Use, modification, or distribution requires prior written permission from the author. See the `LICENSE` file for more details.
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0). You may view and share this work with attribution, but cannot use it commercially or create derivative works without permission. See the `LICENSE.md` file for details.
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## 👤 Author
 
