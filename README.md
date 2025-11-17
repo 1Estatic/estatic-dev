@@ -37,9 +37,9 @@ Este é meu portfólio pessoal, desenvolvido com as mais modernas tecnologias we
 
 ### Frontend
 - **Next.js 15.5.4**: Framework React com App Router e Server Components
-- **React 19.1.0**: Biblioteca para interfaces de usuário
-- **TypeScript 5**: Tipagem estática para maior confiabilidade
-- **Tailwind CSS 4.1.9**: Framework CSS utilitário com PostCSS
+- **React 19.1.0**: Biblioteca para interfaces de usuário com otimizações modernas
+- **TypeScript 5.9.3**: Tipagem estática para maior confiabilidade
+- **Tailwind CSS 4.1.17**: Framework CSS utilitário moderno com PostCSS
 
 ### UI Components & Libraries
 - **Radix UI**: Componentes acessíveis e customizáveis
@@ -54,24 +54,27 @@ Este é meu portfólio pessoal, desenvolvido com as mais modernas tecnologias we
 - **Embla Carousel**: Carousel performático e customizável
 
 ### Formulários & Validação
-- **React Hook Form 7.60.0**: Gerenciamento de formulários performático
+- **React Hook Form 7.66.0**: Gerenciamento de formulários performático
 - **Zod 3.25.76**: Schema validation TypeScript-first
 - **@hookform/resolvers 3.10.0**: Integração Zod + React Hook Form
 
 ### Data & Utilities
 - **Date-fns 4.1.0**: Manipulação moderna de datas
-- **Class Variance Authority**: Variantes de componentes
-- **clsx & tailwind-merge**: Utilitários para classes CSS
-- **cmdk**: Command palette component
+- **Class Variance Authority 0.7.1**: Variantes de componentes
+- **clsx 2.1.1 & tailwind-merge 2.6.0**: Utilitários para classes CSS
+- **cmdk 1.0.4**: Command palette component
 
 ### Analytics & Monitoring
-- **@vercel/analytics**: Analytics integrado da Vercel para métricas de performance
+- **@vercel/analytics 1.5.0**: Analytics integrado da Vercel para métricas de performance
 
 ### Design & Estilização
-- **next-themes**: Gerenciamento de temas (claro/escuro/sistema)
-- **Geist Font**: Família de fontes moderna da Vercel
-- **tailwindcss-animate**: Animações Tailwind pré-configuradas
+- **next-themes 0.4.6**: Gerenciamento de temas (claro/escuro/sistema)
+- **Geist Font 1.5.1**: Família de fontes moderna da Vercel
+- **tailwindcss-animate 1.0.7**: Animações Tailwind pré-configuradas
 - **Recharts 2.15.4**: Biblioteca de gráficos para visualização de dados
+
+### Package Manager
+- **pnpm 10.22.0**: Gerenciador de pacotes rápido e eficiente
 
 ### Recursos e Funcionalidades
 - **App Router**: Roteamento moderno do Next.js 15
@@ -120,6 +123,7 @@ estatic-dev/
 ├── next.config.mjs         # Configuração Next.js
 ├── tailwind.config.ts      # Configuração Tailwind CSS
 ├── tsconfig.json           # Configuração TypeScript
+├── pnpm-lock.yaml          # Lock file do pnpm
 └── package.json            # Dependências e scripts
 ```
 
@@ -127,9 +131,14 @@ estatic-dev/
 
 ### Pré-requisitos
 - **Node.js** 18.x ou superior
-- **pnpm** (recomendado) ou npm/yarn
+- **pnpm 10.22.0** (recomendado) ou npm/yarn
 
-### Instalação
+### Instalação do pnpm (se necessário)
+```bash
+npm install -g pnpm
+```
+
+### Instalação do Projeto
 
 1. Clone o repositório:
 ```bash
@@ -239,11 +248,12 @@ pnpm lint         # Executa linter ESLint
 - **Form Submission**: Preparado para integração com backend
 
 ### Performance
-- **Next.js 15 App Router**: Roteamento otimizado e code splitting
-- **Server Components**: Renderização no servidor quando possível
-- **Image Optimization**: Otimização automática de imagens
-- **Vercel Analytics**: Métricas de performance e Web Vitals
-- **CSS-in-JS**: Tailwind CSS com purge automático
+- **Next.js 15 App Router**: Roteamento otimizado e code splitting automático
+- **Server Components**: Renderização no servidor para melhor performance
+- **Image Optimization**: Otimização automática de imagens com next/image
+- **Vercel Analytics**: Métricas de performance e Web Vitals em tempo real
+- **Tailwind CSS Purge**: CSS otimizado com remoção automática de código não utilizado
+- **pnpm**: Gerenciamento eficiente de dependências com cache global
 
 ## 🌐 Compatibilidade
 
@@ -261,6 +271,7 @@ pnpm lint         # Executa linter ESLint
 - ES2022+ JavaScript
 - CSS Grid & Flexbox
 - CSS Custom Properties
+- React 19 features
 
 ## 📝 Personalização
 
@@ -279,8 +290,14 @@ Para personalizar o portfólio:
 
 ### Funcionalidades
 1. **Adicionar Seções**: Crie novos componentes e importe em `app/page.tsx`
-2. **Novos Componentes UI**: Use shadcn/ui CLI para adicionar componentes
+2. **Novos Componentes UI**: Use shadcn/ui CLI ou adicione manualmente
 3. **Analytics**: Configure `@vercel/analytics` para seu domínio
+
+### Adicionar Componentes shadcn/ui
+```bash
+# Exemplo de como adicionar um novo componente
+pnpm dlx shadcn@latest add [component-name]
+```
 
 ## 🤝 Contribuindo
 
@@ -299,7 +316,7 @@ O projeto está otimizado para deploy na Vercel:
 
 ```bash
 # Instale a CLI da Vercel
-npm i -g vercel
+pnpm add -g vercel
 
 # Deploy
 vercel
@@ -309,6 +326,16 @@ vercel
 - **Netlify**: Compatível com builds Next.js
 - **Railway**: Suporte para SSR e APIs
 - **AWS Amplify**: Deploy automático via Git
+- **Cloudflare Pages**: Suporte para Next.js com Workers
+
+### Build Local
+```bash
+# Criar build de produção
+pnpm build
+
+# Testar build localmente
+pnpm start
+```
 
 ## 📦 Componentes UI Incluídos
 
@@ -366,6 +393,19 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 - **8** Jogos desenvolvidos
 - **50+** Componentes UI reutilizáveis
 - **3** Categorias de projetos
+- **React 19** Versão mais recente do React
+- **pnpm 10.22.0** Gerenciador de pacotes moderno
+
+## 🔧 Tecnologias e Versões
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| Next.js | 15.5.4 | Framework React |
+| React | 19.1.0 | Biblioteca UI |
+| TypeScript | 5.9.3 | Linguagem |
+| Tailwind CSS | 4.1.17 | Framework CSS |
+| pnpm | 10.22.0 | Package Manager |
+| Node.js | 18+ | Runtime JavaScript |
 
 ---
 
@@ -376,7 +416,8 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
   ⭐ Se você gostou deste projeto, considere dar uma estrela!
   
   ![Next.js](https://img.shields.io/badge/Powered%20by-Next.js-black?style=flat-square&logo=next.js)
-  ![React](https://img.shields.io/badge/Built%20with-React-61DAFB?style=flat-square&logo=react)
+  ![React](https://img.shields.io/badge/Built%20with-React%2019-61DAFB?style=flat-square&logo=react)
   ![TypeScript](https://img.shields.io/badge/Written%20in-TypeScript-3178C6?style=flat-square&logo=typescript)
+  ![pnpm](https://img.shields.io/badge/Package%20Manager-pnpm-F69220?style=flat-square&logo=pnpm)
   
 </div>
