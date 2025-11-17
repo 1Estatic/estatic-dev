@@ -23,18 +23,22 @@ This is my personal portfolio, developed with the most modern web technologies t
 ### ✨ Features
 
 - 🎨 **Modern Design**: Elegant interface with immersive galactic background
-- ✨ **Pulsing Stars**: Grok.com-style animated star system with glow effects
+- ✨ **Diagonal Moving Stars**: Canvas-based star system with diagonal movement (bottom-left to top-right)
+- 🌟 **Pulsing Animation**: Grok.com-style star pulsing with individual speeds and glow effects
 - 🌌 **Nebula Effect**: Animated black holes with dynamic radial gradients
-- 📱 **Fully Responsive**: Adapted for desktop, tablet, and mobile
+- 📱 **Fully Responsive**: Adapted for desktop, tablet, and mobile with adaptive text ("Scroll down" / "Swipe down")
 - ⚡ **Optimized Performance**: Next.js 15 with React 19 for maximum performance
-- 🌙 **Theme System**: Support for light, dark, and automatic themes (based on system)
+- 🌙 **Theme System**: Support for light, dark, and automatic themes with persistent preferences
 - 🎯 **Smooth Navigation**: Smooth scroll between sections with floating navbar
-- 🔄 **Interactive Animations**: HTML5 Canvas for stars with smooth transitions
+- 🔄 **Interactive Animations**: HTML5 Canvas for stars with requestAnimationFrame
+- 💎 **Glassmorphism Cards**: Transparent cards with backdrop-blur effects (40% opacity)
+- 🎭 **Interactive Elements**: Scale effects on hover (105%) and click (95%) with cancel detection
 - 📧 **Contact Section**: Integrated contact form and social media links
 - 🎮 **Categorized Portfolio**: Projects organized in Animations, Projects, and College Work
-- 🖼️ **Interactive Dialogs**: Expanded project view by category
+- 🖼️ **Expanded Dialogs**: Large responsive dialogs (up to 5xl on desktop) for project viewing
 - 📊 **Dynamic Statistics**: Metrics for visits, active players, and experience
-- ↑ **Scroll to Top**: Floating button to return to the top of the page
+- ↑ **Scroll to Top**: Glassmorphism floating button with slide-up animation and fade effect
+- 🎨 **Enhanced Contrast**: Optimized colors for light theme with better readability
 
 ## 🛠️ Technologies Used
 
@@ -230,43 +234,47 @@ pnpm lint         # Runs ESLint linter
 ## 🎯 Main Features
 
 ### Interface & Interaction
-- **Theme Switcher**: Toggle between light/dark/system with dynamic icons
+- **Theme Switcher**: Toggle between light/dark/system with dynamic icons and no scroll blocking
 - **Smooth Scroll**: Smooth navigation between sections with native behavior
-- **Scroll to Top**: Floating button that appears when scrolling the page
-- **Responsive Navigation**: Adaptive menu for different screen sizes
-- **Floating Navbar**: Navbar that appears/disappears on scroll
-- **Dialog Modals**: Expanded project view by category
-- **Interactive Cards**: Hover effects and smooth transitions with glassmorphism
+- **Scroll to Top**: Glassmorphism floating button with slide-up animation (appears at 500px scroll)
+- **Responsive Navigation**: Adaptive menu for different screen sizes with sliding animation
+- **Floating Navbar**: Navbar that slides down/up on scroll with fade effect
+- **Large Dialogs**: Responsive dialogs (2xl to 5xl) optimized for desktop viewing
+- **Interactive Cards**: Hover scale (105%) and click scale (95%) with drag-cancel detection
+- **Glassmorphism Design**: Cards with 40% transparency and backdrop-blur-xl effect
+- **Button Interactions**: All buttons scale on hover/click with consistent 200ms transitions
+- **No Drag Behavior**: Links and buttons prevent text selection and dragging
 - **Toast Notifications**: Notification system with Sonner
-- **Starfield Backdrop**: Interactive background that reacts to theme
+- **Adaptive Text**: "Scroll down" on desktop, "Swipe down" on mobile
 
 ### Animations & Effects
-- **Starfield Canvas**: System of 120+ pulsing stars rendered via HTML5 Canvas
-- **Grok-style Stars**: Stars with growth and glow animation (inspired by grok.com)
-- **Uniform Distribution**: Uniform star distribution based on grid
-- **Pulsing Animation**: Each star pulses independently with random speed
-- **Glow Effect**: Radial glow effect that grows with the star
+- **Diagonal Star Movement**: 45 stars moving from bottom-left to top-right with wrap-around
+- **Individual Pulsing**: Each star pulses independently with random speed and phase
+- **Grok-style Animation**: Stars grow/shrink with glow effect (inspired by grok.com)
+- **Canvas Rendering**: HTML5 Canvas with requestAnimationFrame for smooth 60fps animation
+- **Radial Glow**: Dual-layer glow (core + halo) that intensifies with pulse
+- **Theme-adaptive Stars**: Soft pastel colors in light mode (blue-gray, purple, steel blue)
 - **Nebula Background**: Nebula effect with 6 animated black holes
 - **Black Holes**: Ultra-dark radial gradients with colored halos (purple, blue, pink)
-- **Theme-aware Stars**: White stars in dark mode, gray in light mode
-- **Scroll Animations**: Elements that appear during scroll
-- **Smooth Transitions**: Smooth transitions on cards and buttons
-- **Glassmorphism**: Frosted glass effects (backdrop-blur) on cards
-- **Hover Effects**: Smooth transformations on interactive elements
+- **Scroll Animations**: Navbar and scroll-to-top button with slide and fade effects
+- **Card Hover Effects**: Scale transformations (105% hover, 95% active) with 300ms/200ms transitions
+- **Button Interactions**: Consistent scale behavior across all interactive elements
+- **Glassmorphism**: Frosted glass effects (backdrop-blur-xl) on all cards and floating UI
+- **Close Button Animation**: Dialog close buttons with scale and opacity transitions
 
 ### Forms
 - **React Hook Form**: Optimized form management
 - **Zod Validation**: TypeScript-first schema validation
-- **Input Validation**: Real-time visual feedback
+- **Input Validation**: Real-time visual feedback with focus states
 - **Form Submission**: Ready for backend integration
 
 ### Performance
 - **Next.js 15 App Router**: Optimized routing and automatic code splitting
 - **Server Components**: Server-side rendering for better performance
-- **Canvas Rendering**: Stars rendered via HTML5 Canvas with requestAnimationFrame
-- **Efficient Animation**: 120+ animated stars with no performance impact
-- **Theme Detection**: Theme system with automatic system preference detection
-- **Responsive Canvas**: Resizable canvas that adapts to screen size
+- **Canvas Rendering**: 45 stars rendered via HTML5 Canvas with requestAnimationFrame
+- **Efficient Animation**: Diagonal star movement with minimal performance impact
+- **Theme Detection**: Theme system with automatic system preference detection and localStorage persistence
+- **Responsive Canvas**: Resizable canvas that adapts to screen size on window resize
 - **Image Optimization**: Automatic image optimization with next/image
 - **Vercel Analytics**: Real-time performance metrics and Web Vitals
 - **Tailwind CSS Purge**: Optimized CSS with automatic unused code removal
