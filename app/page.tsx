@@ -152,13 +152,17 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="gap-2">
-              <Play className="w-5 h-5" />
-              View My Work
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              Learn More About Me
-            </Button>
+            <a href="#games" draggable="false">
+              <Button size="lg" className="gap-2">
+                <Play className="w-5 h-5" />
+                View My Work
+              </Button>
+            </a>
+            <a href="#about" draggable="false">
+              <Button size="lg" variant="outline" className="gap-2">
+                Learn More About Me
+              </Button>
+            </a>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
@@ -382,7 +386,8 @@ export default function Home() {
                   description: 'Professional inquiries and business opportunities',
                   action: 'Send Email',
                   color: 'from-blue-500/20 to-cyan-500/20',
-                  iconColor: 'text-blue-400'
+                  iconColor: 'text-blue-400',
+                  address: 'mailto:CorporationEstatic@gmail.com',
                 },
                 {
                   icon: SiDiscord,
@@ -391,7 +396,8 @@ export default function Home() {
                   description: 'Quick questions and community discussions',
                   action: 'Add Friend',
                   color: 'from-purple-500/20 to-pink-500/20',
-                  iconColor: 'text-purple-400'
+                  iconColor: 'text-purple-400',
+                  address: 'https://discord.com/channels/@me/332579846062342155',
                 },
                 {
                   icon: SiGithub,
@@ -400,7 +406,8 @@ export default function Home() {
                   description: 'Check out my open source projects and contributions',
                   action: 'View Profile',
                   color: 'from-gray-500/20 to-slate-500/20',
-                  iconColor: 'text-gray-400'
+                  iconColor: 'text-gray-400',
+                  address: 'https://github.com/1Estatic',
                 }
               ].map((contact, i) => {
                 const Icon = contact.icon
@@ -417,10 +424,12 @@ export default function Home() {
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground mb-4 flex-1">{contact.description}</p>
-                      <Button size="sm" className="gap-2 w-full">
-                        <ExternalLink className="w-4 h-4" />
-                        {contact.action}
-                      </Button>
+                      <a href={contact.address} target="_blank" draggable="false">
+                        <Button size="sm" className="gap-2 w-full">
+                          <ExternalLink className="w-4 h-4" />
+                          {contact.action}
+                        </Button>
+                      </a>
                     </div>
                   </Card>
                 )
