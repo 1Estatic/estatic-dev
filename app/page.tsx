@@ -397,7 +397,7 @@ export default function Home() {
                   action: 'Add Friend',
                   color: 'from-purple-500/20 to-pink-500/20',
                   iconColor: 'text-purple-400',
-                  address: 'https://discord.com/channels/@me/332579846062342155',
+                  address: 'https://discord.com/users/332579846062342155',
                 },
                 {
                   icon: SiGithub,
